@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: wxcvph7uu-go-gitops
+  description: This is GitOps manifest for wxcvph7uu-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: wxcvph7uu-go
+    backstage.io/kubernetes-id: wxcvph7uu-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: wxcvph7uu-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:wxcvph7uu-go
